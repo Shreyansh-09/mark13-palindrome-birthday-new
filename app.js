@@ -190,14 +190,14 @@ function clickEventHandler(){
             var [cnt2, prevDate] = getPreviousPalindromeDate(bday);
 
             if (cnt1 > cnt2){
-                outputDiv.innerText = `The nearest palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed by ${cnt2} day(s).`;
+                outputDiv.innerText = `The nearest palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed by ${cnt2} day(s). 😯`;
             }
             else{
-                outputDiv.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${cnt1} day(s).`;
+                outputDiv.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${cnt1} day(s). 😯`;
             }
         }
         else{
-            outputDiv.innerText = "Yay! your birthday is palindrome!"
+            outputDiv.innerText = "Yay! your birthday is palindrome! 🎉🤩"
         }
     }
 
