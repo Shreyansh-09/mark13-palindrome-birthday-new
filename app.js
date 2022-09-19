@@ -160,11 +160,9 @@ function getPreviousPalindromeDate(date){
         previousDate = getPreviousDate(previousDate);
     }
 }
-
 var birthdateInput = document.querySelector("#birth-date");
 var showBtn = document.querySelector("#show-btn");
 var outputDiv = document.querySelector("#output");
-
 function clickEventHandler(){
     var birthdate = birthdateInput.value;
 
@@ -202,5 +200,4 @@ function clickEventHandler(){
     }
 
 }
-
-showBtn.addEventListener("click", clickEventHandler)
+showBtn.addEventListener("click", clickEventHandler);
