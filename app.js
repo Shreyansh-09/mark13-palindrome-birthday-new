@@ -28,8 +28,7 @@ function convertDateToString(date){
     dateStr.year = date.year.toString();
     return (dateStr);
 }
-function dateInAllFormats(date){
-    var strDate = convertDateToString(date);
+function dateInAllFormats(strDate){
 
     var DDMMYYYY = strDate.day + strDate.month + strDate.year;
     var MMDDYYYY = strDate.month + strDate.day + strDate.year;
@@ -106,7 +105,8 @@ function getNextPalindromeDate(date){
 
     while(1){
         cnt++;
-        var checkpalindrome = dateInAllFormats(nextDate);
+        var dateinstring = convertDateToString(nextDate)
+        var checkpalindrome = dateInAllFormats(dateinstring);
         for(var i = 0; i < checkpalindrome.length; i++){
             if(checkPalindrome(checkpalindrome[i])){
                 return [cnt, nextDate];
@@ -150,7 +150,8 @@ function getPreviousPalindromeDate(date){
 
     while(1){
         cnt++;
-        var checkpalindrome = dateInAllFormats(previousDate);
+        var dateinstring = convertDateToString(previousDate);
+        var checkpalindrome = dateInAllFormats(dateinstring);
         for(var i = 0; i < checkpalindrome.length; i++){
             if(checkPalindrome(checkpalindrome[i])){
                 return [cnt, previousDate];
@@ -174,7 +175,6 @@ function clickEventHandler(){
         var DAY = date[2];
 
         var bday = {day: Number(DAY), month: Number(MONTH), year: Number(YEAR)};
-
         var dateStr = convertDateToString(bday);
         var formatlist = checkPalindromeForAllDateFmt(dateStr);
         var isPalindrome = false;
